@@ -4,8 +4,6 @@ plugins {
     id("maven-publish")
 }
 
-group = "com.kmirror"
-version = "0.0.2"
 
 android {
     compileSdk = 32
