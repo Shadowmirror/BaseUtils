@@ -13,13 +13,17 @@ object DependencyConfig {
         const val AppCompat = "1.5.1"
         const val CoreKtx = "1.7.0"
         const val ConstraintLayout = "2.1.3"                // 约束布局
-        const val TestExtJunit = "1.1.2"
-        const val TestEspresso = "3.3.0"
+
         const val ActivityKtx = "1.5.1"
         const val FragmentKtx = "1.5.2"
 
+        // Test
+        const val Junit = "4.13.2"
+        const val TestExtJunit = "1.1.3"
+        const val TestEspresso = "3.4.0"
+
         // Android---------------------------------------------------------------
-        const val Junit = "4.13"
+
         const val Material = "1.6.1"                        // 材料设计UI套件
 
         // Kotlin----------------------------------------------------------------
@@ -53,17 +57,23 @@ object DependencyConfig {
         const val CoreKtx = "androidx.core:core-ktx:${Version.CoreKtx}"
         const val ConstraintLayout =
             "androidx.constraintlayout:constraintlayout:${Version.ConstraintLayout}"
-        const val TestExtJunit = "androidx.test.ext:junit:${Version.TestExtJunit}"
-        const val TestEspresso = "androidx.test.espresso:espresso-core:${Version.TestEspresso}"
         const val ActivityKtx = "androidx.activity:activity-ktx:${Version.ActivityKtx}"
         const val FragmentKtx = "androidx.fragment:fragment-ktx:${Version.FragmentKtx}"
+    }
+
+    /**
+     * Test 相关依赖
+     * */
+    object Test {
+        const val TestExtJunit = "androidx.test.ext:junit:${Version.TestExtJunit}"
+        const val TestEspresso = "androidx.test.espresso:espresso-core:${Version.TestEspresso}"
+        const val Junit = "junit:junit:${Version.Junit}"
     }
 
     /**
      * Android相关依赖
      */
     object Android {
-        const val Junit = "junit:junit:${Version.Junit}"
         const val Material = "com.google.android.material:material:${Version.Material}"
     }
 

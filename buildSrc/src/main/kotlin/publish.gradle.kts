@@ -2,15 +2,15 @@
 plugins {
     id("maven-publish")
 }
+
 publishing {
     publications {
-        create<MavenPublication>("release") {
+        register<MavenPublication>("release") {
+            groupId = "com.github.shadowmirror"
+            artifactId = "BaseUtils"
+            version = "0.0.9"
             afterEvaluate {
-                if (plugins.hasPlugin("com.android.library")) {
-                    from(components["release"])
-                } else {
-                    from(components["java"])
-                }
+                from(components["release"])
             }
         }
     }
