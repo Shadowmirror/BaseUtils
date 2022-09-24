@@ -1,9 +1,12 @@
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
-    id("maven-publish")
 }
 
+
+apply{
+    "$rootProject.projectDir/publish.gradle"
+}
 
 android {
     compileSdk = 32
@@ -36,17 +39,4 @@ dependencies {
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.3")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.4.0")
-}
-
-afterEvaluate {
-    publishing {
-        publications {
-            // Creates a Maven publication called "release".
-            create<MavenPublication>("maven"){
-                groupId = "com.github.kmirror"
-                artifactId = "BaseUtils"
-                version = "0.0.2"
-            }
-        }
-    }
 }
