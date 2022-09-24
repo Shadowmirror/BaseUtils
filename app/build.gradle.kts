@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "miao.kmirror.application"
+    namespace = "miao.kmirror.baseutils"
     compileSdk = 32
 
     defaultConfig {
@@ -38,6 +38,7 @@ dependencies {
     implementation(DependencyConfig.AndroidX.AppCompat)
     implementation(DependencyConfig.Android.Material)
     implementation(DependencyConfig.AndroidX.ConstraintLayout)
+    implementation(project(mapOf("path" to ":library")))
     testImplementation(DependencyConfig.Test.Junit)
     androidTestImplementation(DependencyConfig.Test.TestExtJunit)
     androidTestImplementation(DependencyConfig.Test.TestEspresso)
