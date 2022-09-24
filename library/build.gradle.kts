@@ -1,12 +1,15 @@
+import com.android.build.gradle.internal.scope.publishArtifactToConfiguration
+import com.android.build.gradle.internal.utils.publishingFeatureOptIn
+
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
+    id("maven-publish")
 }
 
+val versionCode = 5
+val versionName = "0.0.5"
 
-apply{
-    "$rootProject.projectDir/publish.gradle"
-}
 
 android {
     compileSdk = 32
@@ -40,3 +43,24 @@ dependencies {
     androidTestImplementation("androidx.test.ext:junit:1.1.3")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.4.0")
 }
+
+afterEvaluate {
+    publishing {
+        publications {
+            create<MavenPublication>("release") {
+                components["release"]
+                groupId = "miao.kmirror"
+                artifactId = "BaseUtils"
+                version = versionName
+            }
+            create<MavenPublication>("debug"){
+                components["debug"]
+                groupId = "miao.kmirror"+ "-debug"
+                artifactId = "BaseUtils" + "-debug"
+                version = versionName
+            }
+        }
+    }
+}
+
+
