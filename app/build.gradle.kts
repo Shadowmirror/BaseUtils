@@ -39,7 +39,6 @@ dependencies {
     implementation(DependencyConfig.Android.Material)
     implementation(DependencyConfig.AndroidX.ConstraintLayout)
     implementation(project(mapOf("path" to ":library")))
-    implementation("com.github.Shadowmirror:BaseUtils:0.0.9")
     testImplementation(DependencyConfig.Test.Junit)
     androidTestImplementation(DependencyConfig.Test.TestExtJunit)
     androidTestImplementation(DependencyConfig.Test.TestEspresso)
