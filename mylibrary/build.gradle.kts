@@ -5,6 +5,14 @@ plugins {
 }
 
 android {
+
+    publishing{
+        singleVariant("release"){
+            withSourcesJar()
+            withJavadocJar()
+        }
+    }
+
     compileSdk = 32
 
     defaultConfig {
@@ -40,12 +48,3 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.4.0")
 }
 
-publishing {
-    publications {
-        create<MavenPublication>("maven") {
-            groupId = "miao.kmirror"
-            artifactId = "BaseUtils"
-            version = "0.0.6"
-        }
-    }
-}
