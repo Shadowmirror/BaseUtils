@@ -10,7 +10,7 @@ publishing {
         register<MavenPublication>("release") {
             groupId = "com.github.shadowmirror"
             artifactId = "BaseUtils"
-            version = "0.0.9"
+            version = "1.0.0"
             afterEvaluate {
                 from(components["release"])
             }
