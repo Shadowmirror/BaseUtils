@@ -16,6 +16,10 @@ android {
         consumerProguardFiles("consumer-rules.pro")
     }
 
+    viewBinding {
+        enable = true
+    }
+
     buildTypes {
         release {
             isMinifyEnabled = false
@@ -29,7 +33,7 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
-    publishing{
+    publishing {
         singleVariant("release") {
             withSourcesJar()
             withJavadocJar()
@@ -40,4 +44,5 @@ android {
 dependencies {
     implementation(DependencyConfig.AndroidX.CoreKtx)
     implementation(DependencyConfig.AndroidX.AppCompat)
+    implementation(DependencyConfig.JetPack.ViewModel)
 }
