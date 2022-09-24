@@ -1,15 +1,8 @@
-import com.android.build.gradle.internal.scope.publishArtifactToConfiguration
-import com.android.build.gradle.internal.utils.publishingFeatureOptIn
-
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
     id("maven-publish")
 }
-
-val versionCode = 5
-val versionName = "0.0.5"
-
 
 android {
     compileSdk = 32
@@ -28,7 +21,10 @@ android {
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
     }
-
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
     kotlinOptions {
         jvmTarget = "1.8"
     }
@@ -44,23 +40,12 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.4.0")
 }
 
-afterEvaluate {
-    publishing {
-        publications {
-            create<MavenPublication>("release") {
-                components["release"]
-                groupId = "miao.kmirror"
-                artifactId = "BaseUtils"
-                version = versionName
-            }
-            create<MavenPublication>("debug"){
-                components["debug"]
-                groupId = "miao.kmirror"+ "-debug"
-                artifactId = "BaseUtils" + "-debug"
-                version = versionName
-            }
+publishing {
+    publications {
+        create<MavenPublication>("maven") {
+            groupId = "miao.kmirror"
+            artifactId = "BaseUtils"
+            version = "0.0.6"
         }
     }
 }
-
-

@@ -1,4 +1,4 @@
-package miao.kmirror.library
+package miao.kmirror.mylibrary
 
 import org.junit.Test
 
