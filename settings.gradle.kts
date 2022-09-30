@@ -18,3 +18,5 @@ include(
     "app"
 )
 include(":library")
+
+include(":netdemo")

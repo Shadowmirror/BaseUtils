@@ -45,4 +45,8 @@ dependencies {
     implementation(DependencyConfig.AndroidX.CoreKtx)
     implementation(DependencyConfig.AndroidX.AppCompat)
     implementation(DependencyConfig.JetPack.ViewModel)
+    implementation(DependencyConfig.GitHub.OkHttp)
+    implementation(DependencyConfig.GitHub.OkHttpInterceptorLogging)
+    implementation(DependencyConfig.GitHub.RetrofitConverterGson)
+    implementation(DependencyConfig.GitHub.Retrofit)
 }

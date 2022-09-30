@@ -33,6 +33,7 @@ object DependencyConfig {
         // JetPack---------------------------------------------------------------
         const val Lifecycle = "2.5.1"                       // Lifecycle相关（ViewModel & LiveData & Lifecycle）
         const val Room = "2.4.3"
+        const val Paging = "3.1.1"
 
         // GitHub----------------------------------------------------------------
         const val OkHttp = "4.9.0"                          // OkHttp
@@ -89,6 +90,8 @@ object DependencyConfig {
         const val RoomRuntime = "androidx.room:room-runtime:${Version.Room}"
         const val RoomCompiler = "androidx.room:room-compiler:${Version.Room}"
         const val RoomKtx = "androidx.room:room-ktx:${Version.Room}"
+        const val PagingRuntime = "androidx.paging:paging-runtime:${Version.Paging}"
+        const val PagingRuntimeKtx = "androidx.paging:paging-runtime-ktx:${Version.Paging}"
     }
 
     /**

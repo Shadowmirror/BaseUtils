@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "miao.kmirror.baseutils"
+    namespace = "miao.kmirror.netdemo"
     compileSdk = 32
 
     defaultConfig {
-        applicationId = "miao.kmirror.baseutils"
+        applicationId = "miao.kmirror.netdemo"
         minSdk = 21
         targetSdk = 32
         versionCode = 1
@@ -17,9 +17,6 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
-    viewBinding{
-        enable = true
-    }
     buildTypes {
         release {
             isMinifyEnabled = false
@@ -33,6 +30,10 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+
+    viewBinding {
+        enable = true
+    }
 }
 
 dependencies {
@@ -45,6 +46,10 @@ dependencies {
     implementation(DependencyConfig.JetPack.ViewModel)
     implementation(DependencyConfig.JetPack.LiveData)
     implementation(DependencyConfig.JetPack.ViewModelSavedState)
+    implementation(DependencyConfig.JetPack.PagingRuntime)
+
+
+    implementation(DependencyConfig.AndroidX.ActivityKtx)
 
 
     implementation(DependencyConfig.AndroidX.CoreKtx)
