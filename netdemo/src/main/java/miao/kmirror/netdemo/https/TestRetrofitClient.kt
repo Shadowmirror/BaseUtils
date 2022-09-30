@@ -5,16 +5,25 @@ import miao.kmirror.library.net.BaseRetrofitClient
 import okhttp3.logging.HttpLoggingInterceptor
 
 object TestRetrofitClient : BaseRetrofitClient() {
-
-
     val service by lazy {
-        setHttpLoggingInterceptor {
-            val interceptor = HttpLoggingInterceptor { message -> Log.i("Gmirror_Retrofit", message) }
-            interceptor.level = HttpLoggingInterceptor.Level.BODY
-            return@setHttpLoggingInterceptor interceptor
-        }
-        getService(ApiService::class.java, "https://www.wanandroid.com/")
+        getService(
+            ApiService::class.java,
+            "https://www.wanandroid.com/",
+            loggingInterceptor = let {
+                val interceptor = HttpLoggingInterceptor { message -> Log.i("Gmirror_Retrofit", message) }
+                interceptor.level = HttpLoggingInterceptor.Level.BODY
+                interceptor
+            }
+        )
     }
 
-
+//    弃用
+//    val service by lazy {
+//        setHttpLoggingInterceptor {
+//            val interceptor = HttpLoggingInterceptor { message -> Log.i("Gmirror_Retrofit", message) }
+//            interceptor.level = HttpLoggingInterceptor.Level.BODY
+//            return@setHttpLoggingInterceptor interceptor
+//        }
+//        getService(ApiService::class.java, "https://www.wanandroid.com/")
+//    }
 }
