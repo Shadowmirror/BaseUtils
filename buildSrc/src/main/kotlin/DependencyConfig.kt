@@ -25,6 +25,7 @@ object DependencyConfig {
         // Android---------------------------------------------------------------
 
         const val Material = "1.6.1"                        // 材料设计UI套件
+        const val Flexbox = "3.0.0"
 
         // Kotlin----------------------------------------------------------------
         const val Kotlin = "1.7.10"
@@ -76,6 +77,7 @@ object DependencyConfig {
      */
     object Android {
         const val Material = "com.google.android.material:material:${Version.Material}"
+        const val Flexbox = "com.google.android.flexbox:flexbox:${Version.Flexbox}"
     }
 
     /**

@@ -8,12 +8,7 @@ object TestRetrofitClient : BaseRetrofitClient() {
     val service by lazy {
         getService(
             ApiService::class.java,
-            "https://www.wanandroid.com/",
-            loggingInterceptor = let {
-                val interceptor = HttpLoggingInterceptor { message -> Log.i("Gmirror_Retrofit", message) }
-                interceptor.level = HttpLoggingInterceptor.Level.BODY
-                interceptor
-            }
+            "https://www.wanandroid.com/"
         )
     }
 

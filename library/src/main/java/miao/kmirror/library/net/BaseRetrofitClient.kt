@@ -2,12 +2,13 @@ package miao.kmirror.library.net
 
 import android.util.Log
 import com.google.gson.Gson
+import miao.kmirror.library.BuildConfig
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import java.io.UnsupportedEncodingException
 import java.util.concurrent.TimeUnit
-import javax.security.auth.login.LoginException
 
 abstract class BaseRetrofitClient {
     open fun <Service> getService(
@@ -20,8 +21,15 @@ abstract class BaseRetrofitClient {
             .serializeNulls()
             .create(),
         loggingInterceptor: HttpLoggingInterceptor = let {
-            val interceptor = HttpLoggingInterceptor { message -> Log.i("Kmirror_Retrofit", message) }
-            interceptor.level = HttpLoggingInterceptor.Level.BODY
+            val interceptor = HttpLoggingInterceptor { message ->
+                Log.d("Kmirror_Retrofit", message)
+            }
+            if (BuildConfig.DEBUG) {
+                interceptor.level = HttpLoggingInterceptor.Level.BODY
+            } else {
+                interceptor.level = HttpLoggingInterceptor.Level.BASIC
+            }
+
             interceptor
         },
         okHttpClient: OkHttpClient = OkHttpClient.Builder()

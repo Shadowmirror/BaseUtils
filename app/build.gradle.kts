@@ -36,17 +36,6 @@ android {
 }
 
 dependencies {
-
-    implementation(DependencyConfig.GitHub.OkHttp)
-    implementation(DependencyConfig.GitHub.OkHttpInterceptorLogging)
-    implementation(DependencyConfig.GitHub.RetrofitConverterGson)
-    implementation(DependencyConfig.GitHub.Retrofit)
-
-    implementation(DependencyConfig.JetPack.ViewModel)
-    implementation(DependencyConfig.JetPack.LiveData)
-    implementation(DependencyConfig.JetPack.ViewModelSavedState)
-
-
     implementation(DependencyConfig.AndroidX.CoreKtx)
     implementation(DependencyConfig.AndroidX.AppCompat)
     implementation(DependencyConfig.Android.Material)

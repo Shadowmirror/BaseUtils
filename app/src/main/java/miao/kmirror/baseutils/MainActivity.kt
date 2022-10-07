@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import miao.kmirror.baseutils.databinding.ActivityMainBinding
 import miao.kmirror.library.ui.BaseActivity
 
+
 class MainActivity : BaseActivity<ActivityMainBinding>() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
