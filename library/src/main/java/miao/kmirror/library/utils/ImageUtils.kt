@@ -41,7 +41,9 @@ object ImageUtils {
 //        Log.d(TAG, "宽高: $wid, $height")
         val yuvImage: YuvImage = toYuvImage(imageProxy)
         yuvImage.compressToJpeg(Rect(0, 0, wid, height), quality, byteArrayOutputStream)
-        return byteArrayOutputStream.toByteArray()
+        val toByteArray = byteArrayOutputStream.toByteArray()
+        byteArrayOutputStream.close()
+        return toByteArray
     }
 
     // 仅作为示例使用
