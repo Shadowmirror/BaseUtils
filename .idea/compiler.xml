@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <bytecodeTargetLevel target="11" />
+    <bytecodeTargetLevel target="1.7">
+      <module name="BaseUtils.app" target="11" />
+      <module name="BaseUtils.bluetoothhdp" target="11" />
+      <module name="BaseUtils.buildSrc" target="11" />
+      <module name="BaseUtils.buildSrc.main" target="11" />
+      <module name="BaseUtils.buildSrc.test" target="11" />
+      <module name="BaseUtils.cameraforpcdemo" target="11" />
+      <module name="BaseUtils.library" target="11" />
+      <module name="BaseUtils.netdemo" target="11" />
+    </bytecodeTargetLevel>
   </component>
 </project>

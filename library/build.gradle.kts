@@ -49,4 +49,5 @@ dependencies {
     implementation(DependencyConfig.GitHub.OkHttpInterceptorLogging)
     implementation(DependencyConfig.GitHub.RetrofitConverterGson)
     implementation(DependencyConfig.GitHub.Retrofit)
+    implementation(DependencyConfig.JetPack.CameraXCore)
 }

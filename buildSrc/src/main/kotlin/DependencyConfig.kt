@@ -17,6 +17,8 @@ object DependencyConfig {
         const val ActivityKtx = "1.5.1"
         const val FragmentKtx = "1.5.2"
 
+        const val CameraX = "1.1.0-beta01"
+
         // Test
         const val Junit = "4.13.2"
         const val TestExtJunit = "1.1.3"
@@ -30,6 +32,7 @@ object DependencyConfig {
         // Kotlin----------------------------------------------------------------
         const val Kotlin = "1.7.10"
         const val Coroutines = "1.6.1"                      // 协程
+        const val Ktor = "1.6.8"
 
         // JetPack---------------------------------------------------------------
         const val Lifecycle = "2.5.1"                       // Lifecycle相关（ViewModel & LiveData & Lifecycle）
@@ -61,6 +64,8 @@ object DependencyConfig {
             "androidx.constraintlayout:constraintlayout:${Version.ConstraintLayout}"
         const val ActivityKtx = "androidx.activity:activity-ktx:${Version.ActivityKtx}"
         const val FragmentKtx = "androidx.fragment:fragment-ktx:${Version.FragmentKtx}"
+
+
     }
 
     /**
@@ -94,6 +99,12 @@ object DependencyConfig {
         const val RoomKtx = "androidx.room:room-ktx:${Version.Room}"
         const val PagingRuntime = "androidx.paging:paging-runtime:${Version.Paging}"
         const val PagingRuntimeKtx = "androidx.paging:paging-runtime-ktx:${Version.Paging}"
+        const val CameraXCore = "androidx.camera:camera-core:${Version.CameraX}"
+        const val CameraXCamer2 = "androidx.camera:camera-camera2:${Version.CameraX}"
+        const val CameraXLifecycle = "androidx.camera:camera-lifecycle:${Version.CameraX}"
+        const val CameraXVideo = "androidx.camera:camera-video:${Version.CameraX}"
+        const val CameraXView = "androidx.camera:camera-view:${Version.CameraX}"
+        const val CameraXExtensions = "androidx.camera:camera-extensions:${Version.CameraX}"
     }
 
     /**
@@ -105,6 +116,13 @@ object DependencyConfig {
             "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Version.Coroutines}"
         const val CoroutinesAndroid =
             "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Version.Coroutines}"
+    }
+
+    object Ktor{
+        const val KtorCore = "io.ktor:ktor-server-core:${Version.Ktor}"
+        const val KotrNetty = "io.ktor:ktor-server-netty::${Version.Ktor}"
+        const val KtorWebsockets = "io.ktor:ktor-websockets::${Version.Ktor}"
+        const val Logback = "ch.qos.logback:logback-classic:1.2.3"
     }
 
     /**

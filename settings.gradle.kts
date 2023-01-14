@@ -15,8 +15,10 @@ dependencyResolutionManagement {
 }
 rootProject.name = "BaseUtils"
 include(
-    "app"
+    "app",
+    "algorithm",
+    "designpattern"
 )
 include(":library")
-
 include(":netdemo")
+include(":cameraforpcdemo")
